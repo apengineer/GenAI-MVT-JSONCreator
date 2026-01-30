@@ -2,6 +2,10 @@
 
 A simple web application that uses AI (Claude 3.5 Sonnet via AWS Bedrock) to convert natural language A/B test requirements into precise JSON configurations.
 
+
+https://github.com/user-attachments/assets/6cc96eb6-4479-4184-928b-d62a34b3dcb6
+
+
 ## Features
 
 - 🤖 Natural language to JSON conversion
@@ -110,3 +114,4 @@ Claude 3.5 Sonnet on Bedrock pricing (approximate):
 ## License
 
 MIT License - feel free to use for demos and prototypes
+
