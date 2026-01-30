@@ -1,6 +1,6 @@
 # MVT JSON Updater - Intelligent Configuration Management
 
-A simple web application that uses AI (Claude 3.5 Sonnet via AWS Bedrock) to convert natural language A/B test requirements into precise JSON configurations.
+A simple web application that uses AI (Claude 4.5 Sonnet via AWS Bedrock) to convert natural language A/B test requirements into precise JSON configurations.
 
 
 https://github.com/user-attachments/assets/6cc96eb6-4479-4184-928b-d62a34b3dcb6
@@ -93,7 +93,7 @@ mvt-json-updater/
 
 Make sure you have:
 1. AWS Bedrock enabled in your region
-2. Access to Claude 3.5 Sonnet model
+2. Access to Claude 4.5 Sonnet model
 3. Proper IAM permissions for `bedrock:InvokeModel`
 
 ## Troubleshooting
@@ -104,14 +104,9 @@ Make sure you have:
 
 **CORS Issues**: The Flask app has CORS enabled for local development
 
-## Cost Considerations
-
-Claude 3.5 Sonnet on Bedrock pricing (approximate):
-- Input: ~$3 per million tokens
-- Output: ~$15 per million tokens
-- Typical request: < $0.01
 
 ## License
 
 MIT License - feel free to use for demos and prototypes
+
 
