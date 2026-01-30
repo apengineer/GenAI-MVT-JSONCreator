@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVT JSON Updater - AI Configuration Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 MVT JSON Updater</h1>
+            <p class="subtitle">Intelligent Configuration Management with AI</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <h2>Describe Your A/B Test</h2>
+                <textarea 
+                    id="description" 
+                    placeholder="Example: Create an A/B test for button color - 50% users see red button, 50% see blue button. Target mobile users in the US. Track click-through rate."
+                    rows="4"
+                ></textarea>
+
+                <h3>Upload Template (Optional)</h3>
+                <div class="upload-section">
+                    <input type="file" id="templateFile" accept=".json" style="display: none;">
+                    <button id="uploadBtn" class="btn btn-secondary btn-small">
+                        <span class="btn-icon">📁</span> Choose JSON Template
+                    </button>
+                    <span id="fileName" style="margin-left: 10px; color: #666;"></span>
+                </div>
+                <textarea 
+                    id="existingJson" 
+                    placeholder="Template content will appear here... or paste your JSON template directly"
+                    rows="8"
+                ></textarea>
+
+                <div class="button-group">
+                    <button id="generateBtn" class="btn btn-primary">
+                        <span class="btn-icon">✨</span> Generate Configuration
+                    </button>
+                    <button id="explainBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">💡</span> Explain Configuration
+                    </button>
+                    <button id="clearBtn" class="btn btn-secondary">
+                        <span class="btn-icon">🗑️</span> Clear All
+                    </button>
+                </div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>AI is generating your configuration...</p>
+                </div>
+
+                <div id="error" class="error" style="display: none;"></div>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section">
+                <div class="output-header">
+                    <h2>Generated Configuration</h2>
+                    <button id="copyBtn" class="btn btn-small" disabled>
+                        <span class="btn-icon">📋</span> Copy JSON
+                    </button>
+                </div>
+                
+                <div class="json-container">
+                    <pre id="output" class="json-output">Your generated JSON will appear here...</pre>
+                </div>
+
+                <div id="explanation" class="explanation" style="display: none;">
+                    <h3>Configuration Explanation</h3>
+                    <div id="explanationText"></div>
+                </div>
+
+                <div class="validation-status" id="validationStatus"></div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Powered by Claude 4.5 Sonnet via AWS Bedrock</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
