@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/6cc96eb6-4479-4184-928b-d62a34b3dcb6
 
 - Python 3.13+
 - AWS Account with Bedrock access
-- Claude 3.5 Sonnet enabled in your AWS region
+- Claude 4.5 Sonnet enabled in your AWS region
 
 ## Setup
 
@@ -37,13 +37,13 @@ Copy the example environment file:
 copy .env.example .env
 ```
 
-Edit `.env` and add your AWS credentials:
+Edit `.env` and add your AWS credentials: Note: Use IAM Roles instead of env files. This is only for demo purposes
 
 ```
 AWS_ACCESS_KEY_ID=your_access_key_here
 AWS_SECRET_ACCESS_KEY=your_secret_key_here
 AWS_REGION=us-east-1
-BEDROCK_MODEL_ID=anthropic.claude-3-5-sonnet-20241022-v2:0
+BEDROCK_MODEL_ID=global.anthropic.claude-sonnet-4-5-20250929-v1:0
 ```
 
 ### 3. Run the Application
@@ -93,14 +93,14 @@ mvt-json-updater/
 
 Make sure you have:
 1. AWS Bedrock enabled in your region
-2. Access to Claude 4.5 Sonnet model
+2. Access to  4.5 Sonnet model
 3. Proper IAM permissions for `bedrock:InvokeModel`
 
 ## Troubleshooting
 
 **AWS Credentials Error**: Make sure your `.env` file exists and contains valid credentials
 
-**Model Not Found**: Verify that Claude 3.5 Sonnet is available in your AWS region
+**Model Not Found**: Verify that  3.5 Sonnet is available in your AWS region
 
 **CORS Issues**: The Flask app has CORS enabled for local development
 
@@ -108,5 +108,6 @@ Make sure you have:
 ## License
 
 MIT License - feel free to use for demos and prototypes
+
 
 
