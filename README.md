@@ -100,7 +100,7 @@ Make sure you have:
 
 **AWS Credentials Error**: Make sure your `.env` file exists and contains valid credentials
 
-**Model Not Found**: Verify that  3.5 Sonnet is available in your AWS region
+**Model Not Found**: Verify that  4.5 Sonnet is available in your AWS region
 
 **CORS Issues**: The Flask app has CORS enabled for local development
 
@@ -108,6 +108,7 @@ Make sure you have:
 ## License
 
 MIT License - feel free to use for demos and prototypes
+
 
 
 
